@@ -3,13 +3,17 @@
     {% block uname %}
     <form action="/signup" method="POST">
         <label for="username">Username:</label> 
-        <input id="username" type="text" name="user_name" /> <label for="user_error">{{user_error}}</label> <br> 
+        <input id="username" type="text" name="user_name" value='{{user_name}}' /> <label for="user_error">{{user_error}}</label> <br> 
+        
         <label for="pword">Password:</label>
         <input id="pword" type="password" name="p_word" />  <label for="pwerror">{{pw_error}}</label> <br>
+        
         <label for="confirm">Verify Password:</label>
-        <input id="confirm" type="text" name="pw_confirm" />  <label for="ver_error">{{verify_error}}</label> <br>        
-        <label for="email">Email (optional):</label> <label for="email_error">{{email_error}}</label>
-        <input id="email" type="text" name="e_email" /> <br>
+        <input id="confirm" type="password" name="pw_confirm" />  <label for="ver_error">{{verify_error}}</label> <br>        
+        
+        <label for="email">Email (optional):</label> 
+        <input id="email" type="text" name="e_email" value='{{e_email}}' /> <label for="email_error">{{email_error}}</label> <br>
+        
         <input type="submit" />
     </form>
 
